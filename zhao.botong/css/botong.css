@@ -1,0 +1,48 @@
+button {
+	margin: 30px auto;
+	width: 350px;
+	height: 50px;
+	border: 0.5px solid #000;
+	border-radius: 8px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	cursor: pointer;
+	color: black;
+	background-color: transparent;
+}
+
+button:hover {
+	background-color: orangered;
+	color: white;
+	transition-duration: 0.3s;
+	border: none;
+}
+
+.title {
+	text-align: center;
+	margin-top: 50px;
+}
+
+footer {
+	text-align: center;
+}
+
+
+.grid.gap {
+	margin-bottom: 40px;
+}
+
+/*让产品名称与价格在一行*/
+.product-name {
+	display: inline-block;
+}
+.price {
+	float: right;
+}
+
+/*调整详情页面按钮位置*/
+.btn {
+	bottom: 20px;
+}
