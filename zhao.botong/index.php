@@ -3,41 +3,24 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Botong's Website</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-	<link rel="stylesheet" href="css/botong.css">
+	 <?php
+        include "parts/meta.php"
+    ?>
 </head>
 
 <body>
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-none">
-				<h1>Owen‘s Store</h1>
-			</div>
-			<div class="flex-stretch"></div>
-			<nav class="flex-none"></nav>
-			<nav class="nav">
-				<ul class="container display-flex">
-					<li><a href="#article1">Home</a></li>
-					<li><a href="#article2">Category</a></li>
-					<li><a href="#article3">Discount</a></li>
-					<li><a href="#article4">About Us</a></li>
-					<li><a href="#article4">Registration</a></li>
-					<li><a href="#article4">Log in</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<?php
+		include "parts/navbar.php"
+	?>
 	<div class="title">
 		<h1>Welcome!</h1>
 	</div>
 
 	<div class="view-window flex-none container" style="background-image:url('img/wine.jpg')"></div>
 
-	<button>Join</button>
+	<div><a href="product_list.php"><button class="join-btn">Join</button></a></div>
 
 	<div class="container">
 		<article id="article1" class="article card soft">

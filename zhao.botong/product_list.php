@@ -3,35 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botong's Website</title>
+    <?php
+        include "parts/meta.php"
+    ?>
 
-    <link rel="stylesheet" href="lib/css/styleguide.css">
-    <link rel="stylesheet" href="lib/css/gridsystem.css">
-    <link rel="stylesheet" href="css/storetheme.css">
-    <link rel="stylesheet" href="css/botong.css">
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="container display-flex">
-            <div class="flex-none">
-                <h1>Owen‘s Store</h1>
-            </div>
-            <div class="flex-stretch"></div>
-            <nav class="flex-none"></nav>
-            <nav class="nav">
-                <ul class="container display-flex">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Discount</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Log in</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+        include "parts/navbar.php"
+    ?>
     <div class="title">
         <h1>Please Select Your Favorit items!</h1>
     </div>
