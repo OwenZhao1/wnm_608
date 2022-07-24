@@ -35,7 +35,7 @@ footer {
 }
 
 /*让产品名称与价格在一行*/
-.product-name {
+.name {
 	display: inline-block;
 }
 .price {

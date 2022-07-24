@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Document</title>
+	<title>Checkout page</title>
 
 	<?php
         include "parts/meta.php"
@@ -20,13 +20,7 @@
 	
 
 	<div class="container">
-
-		<div class="grid gap">
-                <div class="col-xs-12 col-md-4 card soft">
-                	
-                </div>
-
-                <div class="col-xs-12 col-md-8 card soft">
+		<div class="card soft">
 
                 	<form class="form">
                 		<h3>Payment</h3>
@@ -99,7 +93,7 @@
 						</div>
 				
 						
-							<a href="confirm.php" class="form-button">Complete Checkout</a>
+							<a href="confirmation.php" class="form-button">Complete Checkout</a>
 
 						</div>
 					</form>

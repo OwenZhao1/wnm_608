@@ -10,9 +10,9 @@
 			<nav class="nav">
 				<ul class="container display-flex">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="product list.php">Product List</a></li>
-					<li><a href="detail.php">Cart</a></li>
-					<li><a href="checkout.php">Checkout</a></li>
+					<li><a href="product_list.php">Product List</a></li>
+					<li><a href="product_cart.php">Cart</a></li>
+					<li><a href="product_checkout.php">Checkout</a></li>
 				</ul>
 			</nav>
 		</div>

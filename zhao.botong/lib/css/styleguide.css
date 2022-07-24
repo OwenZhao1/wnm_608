@@ -7,9 +7,10 @@
 }
 
 :root {
-	--color-neutral-light: #eee;
-	--color-neutral-medium: #999;
-	--color-neutral-dark: #555;
+	--color-neutral-light: #f8d648;
+	--color-neutral-medium: #007aff;
+	--color-neutral-dark: #005EFF
+;
 
 	--color-main-light: #cbebf9;
 	--color-main-medium: #2592c3;
@@ -101,7 +102,9 @@ a {
 .flex-justify-center {
 	justify-content: center;
 }
-
+.flex-colum {
+	flex-direction: column;
+}
 
 
 /* Small Classes */
@@ -132,7 +135,7 @@ a {
 }
 
 .nav a:hover {
-	background-color: var(--color-main-medium);
+	background-color: var(--color-neutral-light);
 	color: var(--color-white);
 	text-decoration: none;
 }
@@ -269,6 +272,14 @@ a {
 .card .flat {
 	padding: 0;
 }
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-light);
+}
+
+.card-section {
+	padding :1em;
+}
+
 
 /*VIEW-WINDOW*/
 .view-window {
@@ -375,7 +386,8 @@ a {
 }
 
 .form-button {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-neutral-medium);
+	color: white;
 	padding: 0.5em 1em;
 	border-radius: 0.2em;
 	cursor: pointer;
@@ -396,9 +408,10 @@ a {
 
 .form-select>select {
 	padding: 0.5em 1.3em;
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-neutral-medium);
 	border-radius: 0.3em;
 	cursor: pointer;
+	color: white;
 }
 
 .form-select {
@@ -424,7 +437,7 @@ a {
 
 
 .hotdog {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-neutral-medium);
 	border-radius: 2em;
 	padding: 0.5em 1.5em;
 	display: flex;
@@ -443,7 +456,7 @@ a {
 /* SELECT */
 .form-select>select {
 	padding: 0.5em 1em;
-	background-color: var(--color-neutral-light);
+/*	background-color: var(--color-neutral-medium);*/
 	border-radius: 0.3em;
 	cursor: pointer;
 }
@@ -494,3 +507,9 @@ a {
 	transform: translateX(1em);
 
 }
+
+
+
+
+
+

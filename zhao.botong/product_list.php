@@ -1,159 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Botong's Website</title>
-    <?php
-        include "parts/meta.php"
-    ?>
+	<meta charset="UTF-8">
+	
+	<title>Product List</title>
+
+	<?php
+		include "parts/meta.php";
+	?>
 
 </head>
-
 <body>
-    <?php
-        include "parts/navbar.php"
-    ?>
-    <div class="title">
-        <h1>Please Select Your Favorit items!</h1>
-    </div>
+	
+		<?php
+		include "parts/navbar.php";
+	?>
 
-    <div class="container">
-        <div class="grid gap">
-            <div class="col-xs-12 col-md-4">
-                <div class="figure product">
-                    <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div class="product-name">Product Name</div>
-                        <div class="price">$3.99</div>
-                    </figcaption>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <div class="figure product">
-                    <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div class="product-name">Product Name</div>
-                        <div class="price">$3.99</div>
-                    </figcaption>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <div class="figure product">
-                    <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div class="product-name">Product Name</div>
-                        <div class="price">$3.99</div>
-                    </figcaption>
-                </div>
-            </div>
-        </div>
+	<div class="container">
+			<h2 class="title">Product List</h2>
 
 
-        <div class="container">
-            <div class="grid gap">
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<?php
 
+			include_once "lib/php/functions.php";
+			include_once "parts/templates.php";
+			$result = makeQuery(
+				makeConn(),
+				"SELECT *
+				FROM `products`
+				ORDER BY `price`
+				LIMIT 12
+				"
+			);
 
-        <div class="container">
-            <div class="grid gap">
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
 
-    <div class="container">
-            <div class="grid gap">
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="figure product">
-                        <img src="https://via.placeholder.com/400x400?text=product" alt="">
-                        <figcaption>
-                            <div class="product-name">Product Name</div>
-                            <div class="price">$3.99</div>
-                        </figcaption>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <footer class="flex-stretch card soft">
-            @Botong
-        </footer>
-    </div>
+			?>
+		</div>
+	</div>
+	<div class="container">
+		<footer class="flex-stretch card soft">
+			@Botong
+		</footer>
+	</div>
 </body>
-
 </html>
