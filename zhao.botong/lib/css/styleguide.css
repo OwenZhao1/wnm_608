@@ -393,7 +393,9 @@ a {
 	cursor: pointer;
 	text-align: center;
 }
-
+.form-button.inline {
+	width: initial;
+}
 .form-button.inline {
 	width: initial;
 }
@@ -405,13 +407,13 @@ a {
 .form-button:active {
 	background-color: var(--color-main-light);
 }
-
+/* SELECT */
 .form-select>select {
 	padding: 0.5em 1.3em;
-	background-color: var(--color-neutral-medium);
+	background-color: #eee;
 	border-radius: 0.3em;
 	cursor: pointer;
-	color: white;
+/*	color: #eee;*/
 }
 
 .form-select {
@@ -427,7 +429,7 @@ a {
 	right: 0.2em;
 	transform: translateY(-50%);
 	pointer-events: none;
-	color: var(--color-neutral-medium);
+	color: #000;
 }
 
 
@@ -453,29 +455,7 @@ a {
 	color: var(--color-black);
 }
 
-/* SELECT */
-.form-select>select {
-	padding: 0.5em 1em;
-/*	background-color: var(--color-neutral-medium);*/
-	border-radius: 0.3em;
-	cursor: pointer;
-}
 
-.form-select {
-	position: relative;
-}
-
-.form-select::after {
-	content: '▼';
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 0.8em;
-	position: absolute;
-	top: 50%;
-	right: 0.5em;
-	transform: translateY(-50%);
-	pointer-events: none;
-	color: var(--color-neutral-medium);
-}
 
 
 /* TOGGLE */
