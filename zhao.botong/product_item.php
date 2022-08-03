@@ -1,5 +1,6 @@
 <?php
 	include_once "lib/php/functions.php";
+	include_once "parts/templates.php";
 	
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -45,12 +46,13 @@ $image_elements = array_reduce($images,function($r,$o){
                 </div>
 
                 <div class="col-xs-12 col-md-6 card soft">
-                    	<form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+                    	<form method="post" action="cart_actions.php?action=add-to-cart">
 
                     		<input type="hidden" name="product-id" value="<?= $product->id ?>">
 
                     		<div class="card-section">
                     			<h2 class="product-title"><?= $product->name ?></h2>
+                    			<div class="product-category"><?= $product->category ?></div>
                     			<div class="product-price">&dollar;<?= $product->price ?></div>
                     		</div>
                     		                
@@ -93,6 +95,11 @@ $image_elements = array_reduce($images,function($r,$o){
 				<div class="card soft light">
 					<p><?= $product->description ?></p>
 				</div>
+
+				<h2>Recommended Product</h2>
+				<?php
+					recommendedSimilar($product->category,$product->id);
+				?>
 		    		
 			    <div class="container">
 			        <footer class="flex-stretch card soft">

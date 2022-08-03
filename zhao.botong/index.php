@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -51,7 +54,12 @@
 		</div>
 
 	</div>
-
+	<div class="container">
+		<h2>Latest Liquor</h2>
+		<?php recommendedCategory("liquor"); ?>
+		<h2>Latest Beverage</h2>
+		<?php recommendedCategory("beverage"); ?>
+	</div>
 	<div class="container">
 		<footer class="flex-stretch card soft">
 			@Botong
