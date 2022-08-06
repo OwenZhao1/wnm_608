@@ -30,10 +30,9 @@ include_once "parts/templates.php";
 
 			<div class="form-control">
 				<form class="hotdog light" id="product-search">
-					<input type="search" placeholder="Search Product">
+					<input type="search" placeholder="Search Products">
 				</form>
 			</div>
-
 			<div class="form-control">
 				<div class="card soft">
 				<div class="display-flex flex-wrap">
